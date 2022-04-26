@@ -82,7 +82,7 @@ This piece of code is using the operator called the modular operator. What this 
 
 ## Explain `number = number // 2`
 
-This line in the code is going to take a variable called `number` and it will take the number and it will do the integer division of number divided by 2. This is also called "floor division" and it will also take the float value that can sometimes be found and round up or down to the appropriate value.
+This line in the code is going to take a variable called `number` and it will take the number and it will do the integer division of number divided by 2. This is also called "floor division" and it will also take the float value that can sometimes be found and round up or down to the appropriate value. This is very useful when working with floating point values that need to be changed into integers. It can allow the floating point value to be changed into and integer without the use of the use of a `round()`.
 
 ## Explain the meaning and purpose of the following two lines of source code
 
@@ -90,7 +90,8 @@ This line in the code is going to take a variable called `number` and it will ta
 numbers_internal.sort()
 ```
 
-This code is going to create a deepcopy of a list called numbers within a variable called `copy`. The `numbers_internal` varibale is going to hold this new list which has been copied to within a copy called `copy`. The `numbers_internal` variable in the next line when using `.sort()` is going to then take the numbers_internal variable and sort the internal data based on what's inside of it.
+This code is going to create a deepcopy of a list called numbers within a variable called `copy`. The `numbers_internal` varibale is going to hold this new list which has been copied to within a copy called `copy`. The `numbers_internal` variable in the next line when using `.sort()` is going to then take the numbers_internal variable and sort the internal data based on what's inside of it. This is really interesting because it is going to basically take the `numbers` variable
+data and it will then copy and deepcopy that into the `numbers_internal` variable and then the `numbers_internal` variable will be sorted through the `.sort()` function. This is cool because we aren't really changing the values or data within the numbers variable we are just reformatting and copying it so that it is manipulated into the forma that we need it to be seen in. These kinds of loopholes in python are really interesting to me.
 
 ## Use one paragraph to explain the meaning of the following test case
 
@@ -127,4 +128,4 @@ I would really like the learn more about sets and how they work/how they can be 
 
 ## At your own option, do you have any other insights to share about this assignment?
 
-I thought this lab was really interesting and I felt like I learned a lot about the Collatz functions even though I still feel a little bit murky on the subject. I liked that we were able to run a lot of different numbers and see the interesting changes in the minimum, maximum, mean, median, and standard deviations of the length. I thought this lab was cool!
+I thought this lab was really interesting and I felt like I learned a lot about the Collatz functions even though I still feel a little bit murky on the subject. I liked that we were able to run a lot of different numbers and see the interesting changes in the minimum, maximum, mean, median, and standard deviations of the length. I thought this lab was cool! 
