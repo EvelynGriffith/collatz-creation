@@ -11,9 +11,6 @@ from matplotlib import pyplot  # type: ignore
 
 import typer
 
-from collatzcreator import collatz
-from collatzcreator import summarize
-
 cli = typer.Typer()
 
 console = Console()
@@ -71,8 +68,8 @@ def main(
         console.print(str(collatz_output_list_length))
         console.print()
     # compute the minimum and maximum length of the Collatz chain
-    minimum_chain_length = 
-    maximum_chain_length = 
+    minimum_chain_length = min(collatz_output_list_length)
+    maximum_chain_length = max(collatz_output_list_length)
     # compute the mean, median, and standard deviation of the length of the Collatz chain
     mean_chain_length = compute_mean(collatz_input)
     median_chain_length = compute_median(collatz_input)
