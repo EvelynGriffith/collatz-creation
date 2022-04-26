@@ -2,6 +2,7 @@
 
 import pathlib
 from typing import List
+from collatzcreator.collatzcreator.collatz import compute_collatz_chain
 
 from rich.console import Console
 
@@ -44,6 +45,7 @@ def main(
     for collatz_input in collatz_inputs:
         # TODO: call the function named compute_collatz_chain and save its output
         # materialize the list from the returned generator function
+        collatzing = compute_collatz_chain()
         collatz_output_list = list(collatz_output_generator)
         collatz_output_list_length.append(len(collatz_output_list))
     # display the details about the numbers that were input to the function
