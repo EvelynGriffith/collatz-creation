@@ -10,6 +10,8 @@ def compute_collatz_chain(number: int) -> Iterator[int]:
     # continue to iterate until the number is equal to 1
     while number != 1:
         # Add in all of the remaining functionality for this function
+        # Use the modular operator to check the even or odd quality of number.
+        # use if/else statement to do conditional logic
         if number % 2 == 0:
             number = number // 2
         else:

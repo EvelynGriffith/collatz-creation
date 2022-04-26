@@ -1,10 +1,5 @@
 # Collatz Chains
 
-Make sure that you delete all of the TODO markers and rephrase all
-of the prompts inside of this file. When you are finished working on
-this technical writing it should contain polished content without any
-mistakes in Markdown syntax, spelling, or grammar.
-
 ## Evelyn Griffith
 
 ## Program Input and Output
@@ -131,3 +126,5 @@ This lab used a lot of code from previous assignmnts, specifically the code in t
 I would really like the learn more about sets and how they work/how they can be used. I feel like the previous lab was the hardest one for me, and I would like the learn more about it so that I can become more comfortable with those concepts and coding practices.
 
 ## At your own option, do you have any other insights to share about this assignment?
+
+I thought this lab was really interesting and I felt like I learned a lot about the Collatz functions even though I still feel a little bit murky on the subject. I liked that we were able to run a lot of different numbers and see the interesting changes in the minimum, maximum, mean, median, and standard deviations of the length. I thought this lab was cool!
