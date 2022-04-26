@@ -74,7 +74,9 @@ def main(
     # compute the mean, median, and standard deviation of the length of the Collatz chain
     mean_chain_length = summarize.compute_mean(collatz_output_list_length)
     median_chain_length = summarize.compute_median(collatz_output_list_length)
-    stdev_chain_length = summarize.compute_standard_deviation(collatz_output_list_length)
+    stdev_chain_length = summarize.compute_standard_deviation(
+        collatz_output_list_length
+    )
     # display the summary information about the Collatz chains
     console.print(
         ":sparkles: What is the summary information about the length of the Collatz chain?"

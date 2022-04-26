@@ -2,8 +2,6 @@
 
 from typing import List
 
-import copy
-
 
 def compute_mean(numbers: List[int]) -> float:
     # add a complete implementation of this function
