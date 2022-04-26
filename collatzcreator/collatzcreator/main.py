@@ -3,6 +3,7 @@
 import pathlib
 from typing import List
 from collatzcreator.collatzcreator.collatz import compute_collatz_chain
+from collatzcreator.collatzcreator.summarize import compute_mean, compute_median, compute_standard_deviation
 
 from rich.console import Console
 
@@ -43,9 +44,9 @@ def main(
     )
     # execute the collatz function for each of the numbers in the list
     for collatz_input in collatz_inputs:
-        # TODO: call the function named compute_collatz_chain and save its output
+        # call the function named compute_collatz_chain and save its output
         # materialize the list from the returned generator function
-        collatzing = compute_collatz_chain()
+        collatz_output_generator = compute_collatz_chain(collatz_input)
         collatz_output_list = list(collatz_output_generator)
         collatz_output_list_length.append(len(collatz_output_list))
     # display the details about the numbers that were input to the function
@@ -69,8 +70,13 @@ def main(
         console.print()
         console.print(str(collatz_output_list_length))
         console.print()
-    # TODO: compute the minimum and maximum length of the Collatz chain
-    # TODO: compute the mean, median, and standard deviation of the length of the Collatz chain
+    # compute the minimum and maximum length of the Collatz chain
+    minimum_chain_length = 
+    maximum_chain_length = 
+    # compute the mean, median, and standard deviation of the length of the Collatz chain
+    mean_chain_length = compute_mean(collatz_input)
+    median_chain_length = compute_median(collatz_input)
+    stdev_chain_length = compute_standard_deviation(collatz_input)
     # display the summary information about the Collatz chains
     console.print(
         ":sparkles: What is the summary information about the length of the Collatz chain?"
