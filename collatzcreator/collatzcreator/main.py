@@ -2,14 +2,15 @@
 
 import pathlib
 from typing import List
-from collatzcreator.collatzcreator.collatz import compute_collatz_chain
-from collatzcreator.collatzcreator.summarize import compute_mean, compute_median, compute_standard_deviation
 
 from rich.console import Console
 
 from matplotlib import pyplot  # type: ignore
 
 import typer
+
+from collatzcreator import collatz
+from collatzcreator import summarize
 
 cli = typer.Typer()
 
@@ -43,7 +44,7 @@ def main(
     for collatz_input in collatz_inputs:
         # call the function named compute_collatz_chain and save its output
         # materialize the list from the returned generator function
-        collatz_output_generator = compute_collatz_chain(collatz_input)
+        collatz_output_generator = collatz.compute_collatz_chain(collatz_input)
         collatz_output_list = list(collatz_output_generator)
         collatz_output_list_length.append(len(collatz_output_list))
     # display the details about the numbers that were input to the function
@@ -71,9 +72,9 @@ def main(
     minimum_chain_length = min(collatz_output_list_length)
     maximum_chain_length = max(collatz_output_list_length)
     # compute the mean, median, and standard deviation of the length of the Collatz chain
-    mean_chain_length = compute_mean(collatz_input)
-    median_chain_length = compute_median(collatz_input)
-    stdev_chain_length = compute_standard_deviation(collatz_input)
+    mean_chain_length = summarize.compute_mean(collatz_output_list_length)
+    median_chain_length = summarize.compute_median(collatz_output_list_length)
+    stdev_chain_length = summarize.compute_standard_deviation(collatz_output_list_length)
     # display the summary information about the Collatz chains
     console.print(
         ":sparkles: What is the summary information about the length of the Collatz chain?"
